@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miya &amp; Maya Paper — Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:   #1E1428;
+  --mid:   #5A3D6A;
+  --light: #9A80AA;
+  --lilac: #9B72CF;
+  --lil-l: #E4D4F8;
+  --lil-p: #F5F0FC;
+  --rose:  #E06080;
+  --ros-l: #FAD4DF;
+  --ros-p: #FEF0F4;
+  --orange:#F07830;
+  --cream: #FAF8FC;
+  --warm:  #F4EEF8;
+  --sage:  #6A9A6E;
+  --blue:  #5070B0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;color:var(--ink);overflow-x:hidden;background:var(--cream)}
+
+/* ── BANNER GRATUITO FIXO ── */
+.free-banner{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:linear-gradient(135deg,var(--lilac),#7A50B0);
+  color:#fff;text-align:center;padding:10px 16px;
+  font-size:12px;font-weight:500;
+  box-shadow:0 3px 14px rgba(155,114,207,.4);
+  cursor:pointer;text-decoration:none;display:block;
+  transition:background .2s;
+}
+.free-banner:hover{background:linear-gradient(135deg,#7A50B0,#5A3090)}
+.free-banner strong{font-weight:700}
+.free-banner .arr{
+  display:inline-block;margin-left:4px;
+  animation:bDown 1.4s ease-in-out infinite;
+}
+@keyframes bDown{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* ── HEADER BANNER ── */
+.header{
+  width:100%;
+  max-width:420px;
+  margin:46px auto 0;
+  position:relative;
+  overflow:hidden;
+  background:var(--warm);
+  aspect-ratio:16/9;
+  display:flex;align-items:center;justify-content:center;
+}
+.header img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.header-ph{
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:10px;padding:20px;text-align:center;
+  width:100%;height:100%;
+}
+.header-ph .ph-icon{font-size:40px;opacity:.4}
+.header-ph .ph-text{
+  font-size:12px;color:var(--light);font-weight:500;
+  background:rgba(155,114,207,.12);
+  padding:6px 16px;border-radius:20px;
+  line-height:1.5;
+}
+.header-ph .ph-size{
+  font-size:10px;color:var(--light);font-weight:300;opacity:.8;
+}
+
+/* ── CONTAINER ── */
+.container{max-width:420px;margin:0 auto;padding:0 16px 48px}
+
+/* ── SECTION LABEL ── */
+.sec-label{
+  display:flex;align-items:center;gap:10px;
+  margin:24px 0 12px;
+}
+.sec-label::before,.sec-label::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(155,114,207,.28),transparent);
+}
+.sec-label span{
+  font-size:10px;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--light);white-space:nowrap;
+}
+
+/* ── CARD PRODUTO (LP) ── */
+.prod-card{
+  display:flex;align-items:stretch;
+  background:#fff;
+  border:1px solid rgba(155,114,207,.15);
+  border-radius:18px;overflow:hidden;
+  margin-bottom:10px;text-decoration:none;
+  box-shadow:0 2px 12px rgba(30,20,40,.05);
+  min-height:78px;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.prod-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 32px rgba(155,114,207,.15);
+  border-color:rgba(155,114,207,.38);
+}
+.prod-foto{
+  width:70px;min-width:70px;
+  background:var(--warm);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.prod-foto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.prod-foto-ph{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:4px;padding:8px;
+}
+.prod-foto-ph .icon{font-size:24px}
+.prod-foto-ph .hint{
+  font-size:8px;color:var(--light);text-align:center;
+  background:rgba(155,114,207,.1);
+  padding:2px 6px;border-radius:10px;font-weight:500;line-height:1.3;
+}
+.prod-body{
+  flex:1;padding:13px 13px 13px 11px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.prod-info{flex:1;min-width:0}
+.prod-badge{
+  font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  display:inline-block;padding:2px 9px;border-radius:20px;
+  width:fit-content;margin-bottom:5px;
+}
+.b-lilac{color:var(--lilac);background:var(--lil-l)}
+.b-rose {color:var(--rose); background:var(--ros-l)}
+.b-sage {color:var(--sage); background:rgba(106,154,110,.12)}
+.b-ora  {color:var(--orange);background:rgba(240,120,48,.12)}
+.prod-nome{
+  font-family:'Playfair Display',serif;
+  font-size:15px;font-weight:700;color:var(--ink);line-height:1.25;
+}
+.prod-desc{font-size:11px;color:var(--light);font-weight:300;margin-top:3px}
+.prod-arrow{color:var(--lilac);font-size:18px;font-weight:600;flex-shrink:0}
+
+/* ── CARD GRATUITOS ── */
+.gratis-card{
+  background:linear-gradient(135deg,var(--lil-p),var(--ros-p));
+  border:1.5px solid rgba(155,114,207,.28);
+  border-radius:20px;padding:24px 20px;
+  text-align:center;
+  box-shadow:0 6px 24px rgba(155,114,207,.12);
+  text-decoration:none;display:block;
+  transition:transform .22s,box-shadow .22s;
+  margin-bottom:10px;
+}
+.gratis-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 36px rgba(155,114,207,.2);
+}
+.gratis-pill{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--lilac),#7A50B0);
+  color:#fff;font-size:10px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 16px;border-radius:50px;margin-bottom:14px;
+}
+.gratis-titulo{
+  font-family:'Playfair Display',serif;
+  font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px;
+}
+.gratis-titulo em{font-style:italic;color:var(--lilac)}
+.gratis-desc{
+  font-size:13px;color:var(--mid);line-height:1.65;
+  font-weight:300;margin-bottom:18px;
+}
+.btn-gratis{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  background:#fff;color:var(--lilac);
+  border:2px solid var(--lilac);
+  padding:14px;border-radius:12px;
+  font-size:14px;font-weight:700;text-decoration:none;
+  transition:all .22s;
+}
+.btn-gratis:hover{background:var(--lilac);color:#fff;box-shadow:0 6px 20px rgba(155,114,207,.3)}
+.gratis-note{font-size:10px;color:var(--light);margin-top:10px;font-weight:300}
+
+.btn-mais-gratis{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  background:rgba(255,255,255,.85);
+  border:1.5px dashed rgba(155,114,207,.4);
+  border-radius:13px;padding:13px;
+  font-size:13px;font-weight:600;color:var(--lilac);
+  text-decoration:none;transition:all .22s;
+  margin-top:8px;
+}
+.btn-mais-gratis:hover{background:var(--lil-p);border-style:solid}
+
+/* ── FAVORITOS ── */
+.fav-card{
+  display:flex;align-items:center;
+  background:#fff;
+  border:1px solid rgba(155,114,207,.12);
+  border-radius:14px;overflow:hidden;
+  margin-bottom:8px;padding:12px 14px;
+  gap:12px;text-decoration:none;
+  box-shadow:0 2px 8px rgba(30,20,40,.04);
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.fav-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(155,114,207,.12);
+  border-color:rgba(155,114,207,.3);
+}
+.fav-thumb{
+  width:44px;min-width:44px;height:44px;
+  border-radius:10px;overflow:hidden;
+  background:var(--warm);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.fav-thumb img{width:100%;height:100%;object-fit:cover}
+.fav-thumb-ph{font-size:20px}
+.fav-info{flex:1;min-width:0}
+.fav-cat{
+  font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 8px;border-radius:20px;display:inline-block;
+  width:fit-content;margin-bottom:4px;
+}
+.ci{color:var(--blue);background:rgba(80,112,176,.1)}
+.ce{color:#7A5AAA;background:rgba(122,90,170,.1)}
+.ca{color:var(--sage);background:rgba(106,154,110,.1)}
+.cn{color:var(--rose);background:var(--ros-l)}
+.fav-nome{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fav-arrow{color:var(--lilac);font-size:14px;font-weight:600;flex-shrink:0}
+
+/* sub-divider menor */
+.sub-div{
+  display:flex;align-items:center;gap:8px;
+  margin:12px 0 8px;
+}
+.sub-div::before,.sub-div::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(155,114,207,.18),transparent);
+}
+.sub-div span{font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--light);white-space:nowrap}
+
+/* footer */
+footer{background:var(--ink);padding:28px 20px;text-align:center;margin-top:32px}
+footer p{color:rgba(255,255,255,.35);font-size:12px;line-height:1.8}
+footer strong{color:rgba(255,255,255,.65)}
+footer a{color:rgba(255,255,255,.5);text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- BANNER GRATUITO -->
+<a class="free-banner" href="#gratis">
+  &#127873; <strong>Arquivos gratuitos disponíveis!</strong> Clique para resgatar <span class="arr">&#8595;</span>
+</a>
+
+<!-- HEADER BANNER -->
+<header class="header">
+  <img src="foto 1.jpg" alt="Miya &amp; Maya Paper">
+</header>
+
+<div class="container">
+
+  <!-- PRODUTOS -->
+  <div class="sec-label"><span>meus produtos</span></div>
+
+  <!-- Livro de Receitas -->
+  <a href="https://ramostakemiya.github.io/livrosdereceita/" class="prod-card" target="_blank">
+    <div class="prod-foto">
+      <img src="foto 3.jpg" alt="Livro de Receitas">
+    </div>
+    <div class="prod-body">
+      <div class="prod-info">
+        <span class="prod-badge b-lilac">&#127820; Frutas</span>
+        <p class="prod-nome">Livro de Receitas</p>
+        <p class="prod-desc">4 temas de frutas</p>
+      </div>
+      <span class="prod-arrow">&#8594;</span>
+    </div>
+  </a>
+
+  <!-- Marca Página -->
+  <a href="https://ramostakemiya.github.io/miyamaya-paper/" class="prod-card" target="_blank">
+    <div class="prod-foto">
+      <img src="foto 5.jpg" alt="Marca Página">
+    </div>
+    <div class="prod-body">
+      <div class="prod-info">
+        <span class="prod-badge b-rose">&#10024; Bíblico</span>
+        <p class="prod-nome">Marca Página Bíblico</p>
+        <p class="prod-desc">+35 modelos · PNG</p>
+      </div>
+      <span class="prod-arrow">&#8594;</span>
+    </div>
+  </a>
+
+  <!-- Kit Namorados -->
+  <a href="https://ramostakemiya.github.io/kitdiadosnamorados/" class="prod-card" target="_blank">
+    <div class="prod-foto">
+      <img src="FOTO 2.png" alt="Kit Dia dos Namorados">
+    </div>
+    <div class="prod-body">
+      <div class="prod-info">
+        <span class="prod-badge b-rose">&#10084;&#65039; Namorados</span>
+        <p class="prod-nome">Kit Dia dos Namorados</p>
+        <p class="prod-desc">Sacolas + Álbum Sanfona · PDF + PNG</p>
+      </div>
+      <span class="prod-arrow">&#8594;</span>
+    </div>
+  </a>
+
+  <!-- Caixas DXF -->
+  <a href="https://ramostakemiya.github.io/modelosfundoautomatico/" class="prod-card" target="_blank">
+    <div class="prod-foto">
+      <img src="foto 4.jpg" alt="Kit Caixas Fundo Automático">
+    </div>
+    <div class="prod-body">
+      <div class="prod-info">
+        <span class="prod-badge b-sage">&#9986;&#65039; DXF</span>
+        <p class="prod-nome">Kit Caixas Fundo Automático</p>
+        <p class="prod-desc">+10 modelos · DXF + SVG + Studio</p>
+      </div>
+      <span class="prod-arrow">&#8594;</span>
+    </div>
+  </a>
+
+  <!-- Etsy -->
+  <a href="https://www.etsy.com/pt/shop/MiyaeMayaPaper?ref=shop_profile&listing_id=4507272384" class="prod-card" target="_blank" style="border-color:rgba(241,100,30,.2);">
+    <div class="prod-foto" style="background:#FEF0E8;">
+      <img src="FOTO 6.png" alt="Loja Etsy">
+    </div>
+    <div class="prod-body">
+      <div class="prod-info">
+        <span class="prod-badge" style="color:#F1641E;background:rgba(241,100,30,.12);">🛒 Etsy</span>
+        <p class="prod-nome">Minha Loja no Etsy</p>
+        <p class="prod-desc">Produtos digitais · Envio internacional</p>
+      </div>
+      <span class="prod-arrow" style="color:#F1641E;">&#8594;</span>
+    </div>
+  </a>
+
+  <!-- GRATUITOS -->
+  <div class="sec-label" id="gratis"><span>arquivos gratuitos</span></div>
+
+  <a href="https://drive.google.com/drive/folders/1F3aVPH34PTMCoRdk0-U3vEqpchlaXh-s?usp=sharing" class="gratis-card" target="_blank">
+    <span class="gratis-pill">&#127873; Grátis</span>
+    <h2 class="gratis-titulo">Arquivos<br><em>gratuitos</em></h2>
+    <p class="gratis-desc">Modelos para baixar agora, sem cadastro, sem pegadinha. Veja a qualidade antes de decidir.</p>
+    <div class="btn-gratis">&#8659; Acessar arquivos gratuitos</div>
+    <p class="gratis-note">Download direto · Sem cadastro</p>
+  </a>
+
+  <!-- PRODUTOS FAVORITOS -->
+  <div class="sec-label"><span>produtos favoritos</span></div>
+
+  <div class="sub-div"><span>impressão</span></div>
+  <a href="https://s.shopee.com.br/9ALJrmfoKD" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#128199;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ci">Impressão</span>
+      <p class="fav-nome">Papel Fotográfico 180g</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+  <a href="https://s.shopee.com.br/5VS1V6Rgd0" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#128196;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ci">Impressão</span>
+      <p class="fav-nome">Papel Offset 180g</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+
+  <div class="sub-div"><span>equipamentos</span></div>
+  <a href="https://s.shopee.com.br/3LNWvKq8Gs" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#9881;&#65039;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ce">Equipamento</span>
+      <p class="fav-nome">Laminadora</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+
+  <div class="sub-div"><span>acabamento</span></div>
+  <a href="https://s.shopee.com.br/BQV9AXgxy" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#10024;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ca">Acabamento</span>
+      <p class="fav-nome">Polaseal</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+  <a href="https://s.shopee.com.br/60OI64BRPB" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#128251;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ca">Acabamento</span>
+      <p class="fav-nome">Furador</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+  <a href="https://s.shopee.com.br/5L8bJ3cHvE" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#128280;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ca">Acabamento</span>
+      <p class="fav-nome">Arredondador de Bordas</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+  <a href="https://s.shopee.com.br/60OI6NCUqW" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#128207;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat ca">Acabamento</span>
+      <p class="fav-nome">Base de Corte</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+
+  <div class="sub-div"><span>encadernação</span></div>
+  <a href="https://s.shopee.com.br/40dDijNhdE" class="fav-card" target="_blank" rel="noopener">
+    <div class="fav-thumb"><span class="fav-thumb-ph">&#11093;</span></div>
+    <div class="fav-info">
+      <span class="fav-cat cn">Encadernação</span>
+      <p class="fav-nome">Argolas de Plástico</p>
+    </div>
+    <span class="fav-arrow">&#8594;</span>
+  </a>
+
+</div>
+
+<footer>
+  <p>
+    <strong>Miya &amp; Maya Paper</strong><br>
+    <a href="https://instagram.com/andrearamos.art" target="_blank">@andrearamos.art</a><br>
+    Papelaria digital criativa &#10024;
+  </p>
+</footer>
+
+</body>
+</html>
